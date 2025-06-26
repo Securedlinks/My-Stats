@@ -8,7 +8,7 @@ body, html {
     height: 100%;
     overflow-x: hidden;
     font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: #000;
+    background: transparent;
     margin: 0;
     padding: 0;
 }
@@ -24,8 +24,8 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    z-index: -2;
-    filter: blur(3px) brightness(0.6) saturate(1.2);
+    z-index: -1;
+    filter: blur(3px) brightness(0.8) saturate(1.2);
     transition: filter 0.3s ease;
     pointer-events: none;
 }
@@ -37,7 +37,7 @@ body, html {
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    z-index: -1;
+    z-index: 1;
     overflow: hidden;
 }
 
@@ -48,26 +48,11 @@ body, html {
     pointer-events: none;
     font-size: 14px;
     animation: fall linear infinite;
+    animation-duration: 5s;
     opacity: 0.8;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-@keyframes fall {
-    0% {
-        transform: translateY(-100vh) rotate(0deg);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-    }
-}
 
 /* Discord UI Styles */
 .discord-ui {
@@ -629,7 +614,7 @@ body, html {
         grid-template-columns: 1fr;
         max-width: 500px;
     }
-    
+
     .profile-card, .status-card, .server-card, .social-card, .music-player {
         grid-column: 1;
     }
@@ -641,26 +626,26 @@ body, html {
         grid-template-columns: 1fr;
         max-width: 100%;
     }
-    
+
     .profile-header {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .server-card {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .social-icons {
         gap: 15px;
     }
-    
+
     .music-controls {
         flex-direction: column;
         gap: 8px;
     }
-    
+
     .control-buttons {
         margin-left: 0;
     }
@@ -671,15 +656,15 @@ body, html {
         padding: 15px;
         gap: 15px;
     }
-    
+
     .profile-card, .status-card, .server-card, .social-card, .music-player {
         padding: 15px;
     }
-    
+
     .profile-info .username {
         font-size: 20px;
     }
-    
+
     .server-name {
         font-size: 18px;
     }
@@ -691,7 +676,7 @@ body, html {
         max-width: 1000px;
         margin: 0 auto;
     }
-    
+
     .left-column, .right-column {
         flex: 0 1 450px;
     }
@@ -702,15 +687,15 @@ body, html {
         flex-direction: column;
         padding: 15px;
     }
-    
+
     .main-content {
         flex-direction: column;
     }
-    
+
     .left-column, .right-column {
         max-width: 100%;
     }
-    
+
     .profile-card {
         max-width: 100%;
     }
@@ -721,18 +706,18 @@ body, html {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .main-content {
         flex-direction: row;
         justify-content: center;
         max-width: 800px;
     }
-    
+
     .left-column, .right-column {
         max-width: 350px;
         width: 100%;
     }
-    
+
     .profile-card {
         max-width: 600px;
         margin-bottom: 20px;
