@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+/* Custom Ice Cursor */
+body {
+    cursor: url('https://cur.cursors-4u.net/nature/nat-11/nat1022.cur'), auto;
+}
+
+a, button, .join-btn, .social-link, .control-btn {
+    cursor: url('https://cur.cursors-4u.net/nature/nat-11/nat1029.cur'), pointer;
+}
+
 body, html {
     height: 100%;
     overflow-x: hidden;
@@ -69,6 +78,7 @@ body, html {
     align-items: center;
     overflow-x: hidden;
     flex-wrap: wrap;
+    perspective: 1000px; /* Add perspective for 3D effects */
 }
 
 /* Profile card - adjust for horizontal layout */
@@ -119,7 +129,7 @@ body, html {
         0 8px 32px rgba(0, 0, 0, 0.4),
         0 0 0 1px rgba(255, 255, 255, 0.1),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease-out;
     min-height: 140px;
     display: flex;
     flex-direction: column;
@@ -127,6 +137,8 @@ body, html {
     width: 100%;
     position: relative;
     overflow: hidden;
+    transform-style: preserve-3d; /* Enable 3D transformations */
+    transform: translateZ(0) rotateX(0) rotateY(0); /* Initial position */
 }
 
 .profile-card::before, .status-card::before, .server-card::before, .social-card::before, .music-player::before {
@@ -153,11 +165,11 @@ body, html {
 .profile-card:hover, .status-card:hover, .server-card:hover, .social-card:hover, .music-player:hover {
     background: rgba(135, 206, 250, 0.18);
     border-color: rgba(173, 216, 230, 0.7);
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-8px) scale(1.02) translateZ(20px) rotateX(5deg) rotateY(-5deg);
     box-shadow: 
-        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 30px 70px rgba(0, 0, 0, 0.6),
         0 0 0 1px rgba(255, 255, 255, 0.2),
-        0 0 40px rgba(135, 206, 250, 0.3),
+        0 0 50px rgba(135, 206, 250, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
