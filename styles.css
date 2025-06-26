@@ -19,7 +19,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://images.alphacoders.com/119/1196960.jpg');
+    background-image: url('https://images.pexels.com/photos/18729434/pexels-photo-18729434/free-photo-of-view-a-cherry-blossom-against-clear-blue-sky.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,14 +27,15 @@ body, html {
     z-index: -2;
     filter: blur(3px) brightness(0.6) saturate(1.2);
     transition: filter 0.3s ease;
+    pointer-events: none;
 }
 
 .snow-container {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
     z-index: -1;
     overflow: hidden;
