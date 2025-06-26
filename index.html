@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLDBIND</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="snow-container"></div>
+    
+    <div class="discord-ui">
+        <!-- Main Profile Card -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="https://cdn.discordapp.com/embed/avatars/0.png" alt="COLDBIND Avatar" id="avatar">
+                </div>
+                <div class="profile-info">
+                    <h1 class="username">COLDBIND <i class="fas fa-snowflake"></i> <i class="fas fa-gem"></i></h1>
+                    <p class="display-name">COLDBIND</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area - Horizontal Layout -->
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Status Card -->
+                <div class="status-card">
+                    <div class="status-avatar">
+                        <img src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="status-info">
+                        <span class="status-name">ERONULL</span>
+                        <span class="status-time">online now</span>
+                    </div>
+                </div>
+
+                <!-- Server Card -->
+                <div class="server-card">
+                    <div class="server-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="server-info">
+                        <h3 class="server-name">COLDBIND</h3>
+                        <div class="server-stats">
+                            <span class="online-count"><i class="fas fa-circle online"></i> 1,337 Online</span>
+                            <span class="member-count"><i class="fas fa-circle"></i> 13,370 Members</span>
+                        </div>
+                        <a href="https://discord.gg/SSJG3nmv6f" target="_blank" class="join-btn">Join</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Social Links -->
+                <div class="social-card">
+                    <div class="social-icons">
+                        <a href="https://discord.gg/SSJG3nmv6f" target="_blank" class="social-link discord"><i class="fab fa-discord"></i></a>
+                        <a href="https://github.com/ERONULL" target="_blank" class="social-link github"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link spotify" id="spotify-link"><i class="fab fa-spotify"></i></a>
+                    </div>
+                    <div class="social-stats">
+                        <span class="views"><i class="fas fa-eye"></i> 13,370</span>
+                        <span class="location"><i class="fas fa-map-marker-alt"></i> COLDBIND</span>
+                    </div>
+                </div>
+
+                <!-- Music Player -->
+                <div class="music-player">
+                    <div class="music-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="music-info">
+                        <span class="song-title" id="current-song">Frostwave</span>
+                        <div class="music-controls">
+                            <span class="time-current" id="time-current">0:00</span>
+                            <div class="progress-bar" id="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                            <span class="time-total" id="time-total">3:37</span>
+                            <div class="control-buttons">
+                                <button class="control-btn" id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                                <button class="control-btn play-btn" id="play-pause-btn"><i class="fas fa-play"></i></button>
+                                <button class="control-btn" id="next-btn"><i class="fas fa-step-forward"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="audio-player" preload="metadata">
+        <source src="music/frostwave.mp3" type="audio/mpeg">
+        <source src="music/frostwave.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="snow.js"></script>
+    <script src="discord-api.js"></script>
+    <script src="music-player.js"></script>
+</body>
+</html>
